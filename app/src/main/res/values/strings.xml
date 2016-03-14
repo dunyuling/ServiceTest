@@ -62,4 +62,5 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_notification_result">NotificationResultActivity</string>
+    <string name="title_activity_remote_service_test">RemoteServiceTestActivity</string>
 </resources>

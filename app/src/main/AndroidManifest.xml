@@ -23,29 +23,29 @@
         </activity>
 
         <service android:name=".MyService" />
+
         <activity
             android:name=".SecondActivity"
             android:label="@string/title_activity_second"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FrontActivity"
-            android:label="front service"
             android:enabled="true"
             android:exported="true"
-            android:process=":abc"
-            >
-            <intent-filter>
+            android:label="front service"
+            android:process=":abc">
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
 
         <service
             android:name=".NotifactionService"
             android:enabled="true"
             android:exported="true"
-            android:process=":cde"
-            />
+            android:process=":cde" />
 
         <activity
             android:name=".NotificationResultActivity"
@@ -54,8 +54,29 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".FrontActivity"/>
+                android:value=".FrontActivity" />
         </activity>
+
+        <service
+            android:name=".MyRemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".RemoteServiceTestActivity"
+            android:label="@string/title_activity_remote_service_test"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
