@@ -59,9 +59,13 @@
 
         <service
             android:name=".MyRemoteService"
-            android:enabled="true"
             android:exported="true"
-            android:process=":remote" />
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="example.com.servicetest.MyAidlService"/>
+            </intent-filter>
+         </service>
 
         <activity
             android:name=".RemoteServiceTestActivity"
